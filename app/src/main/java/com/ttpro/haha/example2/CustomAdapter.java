@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,6 +40,7 @@ public class CustomAdapter extends ArrayAdapter {
         //bind with workView
         TextView workContent = ((CustomView)workView).WorkContent;
         TextView timeContent =((CustomView)workView).TimeContent;
+        CheckBox checkBox = ((CustomView)workView).checkBox;
 
         //set text in textview
         workContent.setText(tmp.getWork());

@@ -2,6 +2,7 @@ package com.ttpro.haha.example2;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,7 +14,7 @@ import org.w3c.dom.Text;
 public class CustomView extends LinearLayout {
     public TextView WorkContent;
     public TextView TimeContent;
-
+    public CheckBox checkBox;
     public CustomView(Context context) {
         super(context);
 
@@ -24,6 +25,6 @@ public class CustomView extends LinearLayout {
         //bind
         WorkContent = (TextView) findViewById(R.id.WorkText);
         TimeContent = (TextView) findViewById(R.id.TimeText);
-
+        checkBox = (CheckBox) findViewById(R.id.checkbox);
     }
 }
