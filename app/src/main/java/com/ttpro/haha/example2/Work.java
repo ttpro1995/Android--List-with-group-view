@@ -6,13 +6,23 @@ package com.ttpro.haha.example2;
 public class Work {
     private String work;
     private String time;
-
+    private boolean checked;
     public Work() {
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 
     public Work(String work, String time) {
         this.work = work;
         this.time = time;
+        checked = false;
+
     }
 
     public String getWork() {
