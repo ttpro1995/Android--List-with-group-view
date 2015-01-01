@@ -77,11 +77,25 @@
 
     </ListView>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="CLEAR ALL"
+        android:layout_weight="1"
         android:id="@+id/Clear_All"
         />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_weight="1"
+        android:id="@+id/Delete_selected"
+        />
+    </LinearLayout>
 </LinearLayout>

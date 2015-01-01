@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     private Button submit_button;
    private ArrayList<Work> p_arr; // private ArrayList<String> p_arr;
     private Button clear_all;
-
+    private Button Delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,24 @@ public class MainActivity extends ActionBarActivity {
                 //adapter = new ArrayAdapter(MainActivity.this,R.layout.item,R.id.textView_item,p_arr);
                 //list.setAdapter(adapter);
 
+                CustomAdapter adapter;
+                adapter = new CustomAdapter(MainActivity.this,R.layout.item_with_title_and_time,p_arr);
+                list.setAdapter(adapter);
+            }
+        });
+
+
+        Delete = (Button) findViewById(R.id.Delete_selected);
+        Delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i=0;i<p_arr.size();i++)
+                {
+                    if (p_arr.get(i).isChecked())
+                    {
+                        p_arr.remove(i);
+                    }
+                }
                 CustomAdapter adapter;
                 adapter = new CustomAdapter(MainActivity.this,R.layout.item_with_title_and_time,p_arr);
                 list.setAdapter(adapter);
@@ -105,6 +123,7 @@ public class MainActivity extends ActionBarActivity {
         list.setAdapter(adapter);
 
     }
+
 
 
 }
