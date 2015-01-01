@@ -96,6 +96,7 @@
         android:text="Delete"
         android:layout_weight="1"
         android:id="@+id/Delete_selected"
+        android:drawableLeft="@drawable/x"
         />
     </LinearLayout>
 </LinearLayout>
